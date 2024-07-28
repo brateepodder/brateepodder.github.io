@@ -3239,3 +3239,48 @@ input, select, textarea {
 			line-height: 1.5em;
 			margin: 0;
 		}
+	
+	 /* Tech Stack */
+	.tech-stack img {
+		height: 50px; /* Adjust the height as needed */
+		margin: 5px; /* Add some spacing around the images */
+		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+	}
+
+	/* Styling for hover effect */
+	.tech-stack img:hover {
+		transform: translateY(-10px); /* Move the image up by 10px */
+	}
+
+	.tech-section h2 {
+		transition: color 0.3s ease; /* Smooth transition for color changes */
+	}
+	
+	/* Change the color of the h2 tag when any image in the associated ul is hovered over */
+	.tech-section:hover h2 {
+		color: #3eb08f; /* Change to the desired color */
+	}
+	
+	ul.tech-stack {
+		cursor: default;
+		list-style: none;
+		padding-left: 0;
+	}
+
+	ul.tech-stack li {
+		display: inline-block;
+			padding: 0 1em 0 0;
+	}
+
+	ul.tech-stack li:last-child {
+		padding-right: 0;
+	}
+
+	ul.icons li .icon:before {
+		font-size: 1.5em;
+	}
+
+	ul.tech-stack .databases {
+		height: 80px;
+		margin: 5px;
+	}
