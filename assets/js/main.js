@@ -4,6 +4,28 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+document.addEventListener('DOMContentLoaded', (event) => {
+    const toggles = document.querySelectorAll('.made-with-toggle');
+    toggles.forEach(toggle => {
+        const content = toggle.nextElementSibling;
+        const arrow = toggle.querySelector('.arrow');
+
+        toggle.addEventListener('click', () => {
+            const isOpen = content.classList.contains('open');
+
+            if (isOpen) {
+                content.style.maxHeight = null;
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+            }
+
+            content.classList.toggle('open');
+            arrow.classList.toggle('rotate', !isOpen);
+			toggle.classList.toggle('open', !isOpen);
+        });
+    });
+});
+
 (function($) {
 
 	var $window = $(window),

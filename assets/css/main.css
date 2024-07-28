@@ -3252,10 +3252,11 @@ input, select, textarea {
 		transform: translateY(-10px); /* Move the image up by 10px */
 	}
 
+	/* Transition for the h2 tag */
 	.tech-section h2 {
 		transition: color 0.3s ease; /* Smooth transition for color changes */
 	}
-	
+
 	/* Change the color of the h2 tag when any image in the associated ul is hovered over */
 	.tech-section:hover h2 {
 		color: #3eb08f; /* Change to the desired color */
@@ -3284,3 +3285,42 @@ input, select, textarea {
 		height: 80px;
 		margin: 5px;
 	}
+
+	/* Made-With Toggle */
+
+	.made-with-content {
+		max-height: 0;
+		margin-top: 0.3rem;
+		overflow: hidden;
+		opacity: 0;
+		transform: translateY(-2px);
+		transition: max-height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+	}
+	
+	.made-with-content.open {
+		max-height: 500px; /* Adjust based on your content's height */
+		opacity: 1;
+		transform: translateY(0);
+	}
+	
+	.made-with-toggle {
+		cursor: pointer;
+		user-select: none; /* Prevent text selection */
+		transition: color 0.6 ease;
+	}
+
+	.made-with-toggle.open {
+		color: #3eb08f;
+	}
+	
+	.arrow {
+		display: inline-block;
+		font-size: 0.8rem;
+		transition: transform 0.6s ease;
+	}
+	
+	.arrow.rotate {
+		transform: rotate(180deg); /* Rotate the arrow when open */
+		color: #3eb08f;
+	}
+	
