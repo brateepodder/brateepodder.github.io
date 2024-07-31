@@ -3329,7 +3329,7 @@ input, select, textarea {
 	.experiences {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: center;
+		/* justify-content: center; */
 		margin-bottom: 20px;
 		align-items: center;
 	}
