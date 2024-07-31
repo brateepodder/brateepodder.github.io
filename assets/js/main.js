@@ -4,6 +4,7 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
+// function for "Made With" dropdown
 document.addEventListener('DOMContentLoaded', (event) => {
     const toggles = document.querySelectorAll('.made-with-toggle');
     toggles.forEach(toggle => {
@@ -25,6 +26,75 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 });
+
+function showLeadershipDescription(id) {
+    var container = document.getElementById('leadership-description-container');
+    var descriptions = container.getElementsByClassName('dropdown-content');
+
+    // Get the current description element
+    var currentDesc = document.getElementById(id);
+
+    // Check if the current description is already open
+    var isOpen = currentDesc.classList.contains('open');
+
+    // Hide all descriptions
+    for (var i = 0; i < descriptions.length; i++) {
+        descriptions[i].classList.remove('open');
+    }
+	// container.classList.remove('open');
+
+    // If the current description was not open, open it
+    if (!isOpen) {
+        currentDesc.classList.add('open');
+		container.classList.add('open');
+        container.style.display = 'block';
+    } else {
+        // If the current description was open, hide the container
+        container.classList.remove('open');
+		currentDesc.classList.remove('open');
+    }
+}
+
+function showEndeavorsDescription(id) {
+    var container = document.getElementById('endeavors-description-container');
+    var descriptions = container.getElementsByClassName('dropdown-content');
+    var currentDesc = document.getElementById(id);
+    var isOpen = currentDesc.classList.contains('open');
+
+    for (var i = 0; i < descriptions.length; i++) {
+        descriptions[i].classList.remove('open');
+    }
+
+    if (!isOpen) {
+        currentDesc.classList.add('open');
+		container.classList.add('open');
+        container.style.display = 'block';
+    } else {
+        container.classList.remove('open');
+		currentDesc.classList.remove('open');
+    }
+}
+
+function showOrganizationDescription(id) {
+    var container = document.getElementById('organization-description-container');
+    var descriptions = container.getElementsByClassName('dropdown-content');
+    var currentDesc = document.getElementById(id);
+    var isOpen = currentDesc.classList.contains('open');
+
+    for (var i = 0; i < descriptions.length; i++) {
+        descriptions[i].classList.remove('open');
+    }
+
+    if (!isOpen) {
+        currentDesc.classList.add('open');
+		container.classList.add('open');
+        container.style.display = 'block';
+    } else {
+        container.classList.remove('open');
+		currentDesc.classList.remove('open');
+    }
+}
+
 
 (function($) {
 

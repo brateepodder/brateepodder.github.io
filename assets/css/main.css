@@ -3244,7 +3244,7 @@ input, select, textarea {
 	.tech-stack img {
 		height: 50px; /* Adjust the height as needed */
 		margin: 5px; /* Add some spacing around the images */
-		transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+		transition: transform 0.3s ease; /* Smooth transition for hover effects */
 	}
 
 	/* Styling for hover effect */
@@ -3293,7 +3293,7 @@ input, select, textarea {
 		margin-top: 0.3rem;
 		overflow: hidden;
 		opacity: 0;
-		transform: translateY(-2px);
+		transform: translateY(0px);
 		transition: max-height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
 	}
 	
@@ -3305,7 +3305,7 @@ input, select, textarea {
 	
 	.made-with-toggle {
 		cursor: pointer;
-		user-select: none; /* Prevent text selection */
+		user-select: none;
 		transition: color 0.6 ease;
 	}
 
@@ -3322,5 +3322,58 @@ input, select, textarea {
 	.arrow.rotate {
 		transform: rotate(180deg); /* Rotate the arrow when open */
 		color: #3eb08f;
+	}
+	
+	/* Leadership & Experiences */
+
+	.experiences {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 20px;
+		align-items: center;
+	}
+	
+	.experience {
+		position: relative;
+		margin-right: 40px;
+		cursor: pointer;
+	}
+	
+	.experience-img {
+		height:80px;
+		transition: transform 0.2s;
+	}
+	
+	.experience-img:hover {
+		transform: scale(1.05);
+	}
+	
+	.description-container {
+		display: flex;
+		flex-wrap: wrap;
+		transform: translateY(0px);
+		transition: max-height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5 ease-out;
+	}
+
+	.description-container.open {
+		opacity: 1;
+		max-height: auto;
+		transform: translateY(0);
+	}
+	
+
+	.dropdown-content {
+		max-height: 0;
+		overflow: hidden;
+		opacity: 0;
+		transform: translateY(0);
+		transition: max-height 0.5s ease-out, opacity 0.5s ease-out, transform 0.5s ease-out;
+	}
+	
+	.dropdown-content.open {
+		opacity: 1;
+		max-height: 300px;
+		transform: translateY(0);
 	}
 	
